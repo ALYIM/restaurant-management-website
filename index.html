@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <!-- ity ilay  responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Delicious Restaurant</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS personnalisé -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Delicious</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#accueil">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reservation">Réservation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#equipe">Équipe</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="accueil" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container h-100 d-flex flex-column justify-content-center">
+            <div class="row">
+                <div class="col-12 text-center text-white hero-content">
+                    <h1 class="hero-title">Delicious Restaurant</h1>
+                    <div class="hero-divider mx-auto"></div>
+                    <p class="hero-subtitle">Une expérience culinaire exceptionnelle</p>
+                    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                        <a href="#reservation" class="hero-btn btn btn-primary btn-lg px-4 gap-3">
+                            Réserver une table
+                        </a>
+                        <a href="#menu" class="hero-btn btn btn-outline-light btn-lg px-4">
+                            Voir le menu
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="#menu" class="hero-scroll-down">
+            <i class="fas fa-angle-down"></i>
+        </a>
+    </header>
+
+
+    <!-- Section Menu français avec carrousel -->
+<section id="menu" class="py-5 bg-light">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <h2 class="section-title">Notre Menu Français</h2>
+                <p class="section-subtitle">Découvrez nos spécialités gastronomiques</p>
+            </div>
+        </div>
+        
+        <!-- Carrousel de menus -->
+        <div id="menuCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Premier groupe de 4 menus -->
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card menu-item h-100">
+                                <img src="images/boeuf-bourguignon.jpg" class="card-img-top" alt="Bœuf bourguignon">
+                                <div class="card-body">
+                                    <h5 class="card-title">Bœuf bourguignon</h5>
+                                    <p class="card-text">Bœuf mijoté au vin rouge avec carottes, oignons et champignons.</p>
+                                    <span class="price">€18.90</span>
+                                    <button class="btn btn-sm btn-outline-primary float-end add-to-cart">Ajouter</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card menu-item h-100">
+                                <img src="images/canard.jpg" class="card-img-top" alt="Confit de canard">
+                                <div class="card-body">
+                                    <h5 class="card-title">Confit de canard</h5>
+                                    <p class="card-text">Cuisse de canard confite, pommes de terre sarladaises.</p>
+                                    <span class="price">€21.50</span>
+                                    <button class="btn btn-sm btn-outline-primary float-end add-to-cart">Ajouter</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card menu-item h-100">
+                                <img src="images/soupe-a-l-oignon.jpg" class="card-img-top" alt="Soupe à l'oignon">
+                                <div class="card-body">
+                                    <h5 class="card-title">Soupe à l'oignon</h5>
+                                    <p class="card-text">Soupe traditionnelle gratinée avec emmental et croûtons.</p>
+                                    <span class="price">€9.50</span>
+                                    <button class="btn btn-sm btn-outline-primary float-end add-to-cart">Ajouter</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card menu-item h-100">
+                                <img src="images/ratatouille.jpg" class="card-img-top" alt="Ratatouille">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ratatouille niçoise</h5>
+                                    <p class="card-text">Légumes provençaux mijotés (aubergines, courgettes, poivrons).</p>
+                                    <span class="price">€15.00</span>
+                                    <button class="btn btn-sm btn-outline-primary float-end add-to-cart">Ajouter</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Deuxième groupe de 4 menus -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card menu-item h-100">
+                                <img src="images/cassoulet.jpg" class="card-img-top" alt="Cassoulet">
+                                <div class="card-body">
+                                    <h5 class="card-title">Cassoulet toulousain</h5>
+                                    <p class="card-text">Haricots blancs, saucisse de Toulouse, confit de canard.</p>
+                                    <span class="price">€19.90</span>
+                                    <button class="btn btn-sm btn-outline-primary float-end add-to-cart">Ajouter</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card menu-item h-100">
+                                <img src="images/quiche-lorraine.jpg" class="card-img-top" alt="Quiche Lorraine">
+                                <div class="card-body">
+                                    <h5 class="card-title">Quiche Lorraine</h5>
+                                    <p class="card-text">Tarte salée avec lardons, œufs et crème fraîche.</p>
+                                    <span class="price">€12.50</span>
+                                    <button class="btn btn-sm btn-outline-primary float-end add-to-cart">Ajouter</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card menu-item h-100">
+                                <img src="images/salade-nicoise.jpg" class="card-img-top" alt="Salade Niçoise">
+                                <div class="card-body">
+                                    <h5 class="card-title">Salade Niçoise</h5>
+                                    <p class="card-text">Thon, œufs, tomates, olives noires, haricots verts.</p>
+                                    <span class="price">€14.50</span>
+                                    <button class="btn btn-sm btn-outline-primary float-end add-to-cart">Ajouter</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card menu-item h-100">
+                                <img src="images/tarte-tatin.jpg" class="card-img-top" alt="Tarte Tatin">
+                                <div class="card-body">
+                                    <h5 class="card-title">Tarte Tatin</h5>
+                                    <p class="card-text">Tarte renversée aux pommes caramélisées.</p>
+                                    <span class="price">€8.50</span>
+                                    <button class="btn btn-sm btn-outline-primary float-end add-to-cart">Ajouter</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Troisième groupe de 4 menus -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card menu-item h-100">
+                                <img src="images/coq-au-vin.jpg" class="card-img-top" alt="Coq au vin">
+                                <div class="card-body">
+                                    <h5 class="card-title">Coq au vin</h5>
+                                    <p class="card-text">Poulet mijoté au vin rouge, lardons et champignons.</p>
+                                    <span class="price">€20.50</span>
+                                    <button class="btn btn-sm btn-outline-primary float-end add-to-cart">Ajouter</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card menu-item h-100">
+                                <img src="images/gratin-dauphinois.jpg" class="card-img-top" alt="Gratin dauphinois">
+                                <div class="card-body">
+                                    <h5 class="card-title">Gratin dauphinois</h5>
+                                    <p class="card-text">Pommes de terre à la crème fraîche et noix de muscade.</p>
+                                    <span class="price">€13.00</span>
+                                    <button class="btn btn-sm btn-outline-primary float-end add-to-cart">Ajouter</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card menu-item h-100">
+                                <img src="images/provencal.jpg" class="card-img-top" alt="Bouillabaisse">
+                                <div class="card-body">
+                                    <h5 class="card-title">Bouillabaisse</h5>
+                                    <p class="card-text">Soupe de poissons méditerranéenne.</p>
+                                    <span class="price">€24.00</span>
+                                    <button class="btn btn-sm btn-outline-primary float-end add-to-cart">Ajouter</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3 mb-4">
+                            <div class="card menu-item h-100">
+                                <img src="images/crème-brûlée.jpg" class="card-img-top" alt="Crème brûlée">
+                                <div class="card-body">
+                                    <h5 class="card-title">Crème brûlée</h5>
+                                    <p class="card-text">Crème vanille caramélisée.</p>
+                                    <span class="price">€7.50</span>
+                                    <button class="btn btn-sm btn-outline-primary float-end add-to-cart">Ajouter</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contrôles du carrousel -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#menuCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+                <span class="visually-hidden">Précédent</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#menuCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+                <span class="visually-hidden">Suivant</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+    <br><br>
+
+    <!-- Réservation Section -->
+    <section id="reservation" class="py-5 bg-white">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="section-title">Réservation</h2>
+                    <p class="section-subtitle">Réservez votre table en ligne</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <form id="reservation-form" class="row g-3">
+                        <div class="col-md-6">
+                            <label for="name" class="form-label">Nom complet</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="phone" class="form-label">Téléphone</label>
+                            <input type="tel" class="form-control" id="phone" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="guests" class="form-label">Nombre de personnes</label>
+                            <select class="form-select" id="guests" required>
+                                <option value="1">1 personne</option>
+                                <option value="2">2 personnes</option>
+                                <option value="3">3 personnes</option>
+                                <option value="4">4 personnes</option>
+                                <option value="5">5+ personnes</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="date" class="form-label">Date</label>
+                            <input type="date" class="form-control" id="date" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="time" class="form-label">Heure</label>
+                            <input type="time" class="form-control" id="time" required>
+                        </div>
+                        <div class="col-12">
+                            <label for="message" class="form-label">Demandes spéciales</label>
+                            <textarea class="form-control" id="message" rows="3"></textarea>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-primary btn-lg">Réserver</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Équipe Section -->
+    <section id="equipe" class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="section-title">Notre Équipe</h2>
+                    <p class="section-subtitle">Rencontrez nos professionnels</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card team-member text-center">
+                        <img src="images/team1.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Chef 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Jean Dupont</h5>
+                            <p class="card-text text-muted">Chef Cuisinier</p>
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card team-member text-center">
+                        <img src="images/team2.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Chef 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Marie Lambert</h5>
+                            <p class="card-text text-muted">Pâtissière</p>
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card team-member text-center">
+                        <img src="images/team3.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Serveur">
+                        <div class="card-body">
+                            <h5 class="card-title">Thomas Martin</h5>
+                            <p class="card-text text-muted">Maître d'hôtel</p>
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-4">
+                    <div class="card team-member text-center">
+                        <img src="images/team4.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Sommelier">
+                        <div class="card-body">
+                            <h5 class="card-title">Sophie Leroy</h5>
+                            <p class="card-text text-muted">Sommelier</p>
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-facebook"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-white">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="section-title">Contactez-nous</h2>
+                    <p class="section-subtitle">Nous sommes à votre écoute</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Informations de contact</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Rue du Restaurant, Paris</li>
+                                <li class="mb-2"><i class="fas fa-phone me-2"></i> +33 1 23 45 67 89</li>
+                                <li class="mb-2"><i class="fas fa-envelope me-2"></i> contact@delicious.com</li>
+                                <li><i class="fas fa-clock me-2"></i> Ouvert 7j/7 de 11h à 23h</li>
+                            </ul>
+                            <div class="map-container mt-4">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937595!2d2.292292615509614!3d48.85837007928746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1623251234567!5m2!1sfr!2sfr" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Envoyez-nous un message</h5>
+                            <form id="contact-form">
+                                <div class="mb-3">
+                                    <label for="contact-name" class="form-label">Nom</label>
+                                    <input type="text" class="form-control" id="contact-name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="contact-email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="contact-email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="contact-subject" class="form-label">Sujet</label>
+                                    <input type="text" class="form-control" id="contact-subject" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="contact-message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="contact-message" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Envoyer</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Delicious</h5>
+                    <p>Un restaurant offrant une expérience culinaire exceptionnelle avec des ingrédients frais et locaux.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5>Liens rapides</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#accueil" class="text-white">Accueil</a></li>
+                        <li><a href="#menu" class="text-white">Menu</a></li>
+                        <li><a href="#reservation" class="text-white">Réservation</a></li>
+                        <li><a href="#equipe" class="text-white">Équipe</a></li>
+                        <li><a href="#contact" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Newsletter</h5>
+                    <p>Abonnez-vous à notre newsletter pour recevoir nos offres spéciales.</p>
+                    <form class="mb-3">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Votre email">
+                            <button class="btn btn-primary" type="submit">S'abonner</button>
+                        </div>
+                    </form>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2025 Gestion de Restauration. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Panier flottant -->
+    <div class="cart-floating">
+        <button class="btn btn-primary position-relative" id="cart-button">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-count">0</span>
+        </button>
+        <div class="cart-dropdown" id="cart-dropdown">
+            <div class="cart-header">
+                <h6>Votre Panier</h6>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Les éléments du panier seront ajoutés ici dynamiquement -->
+                <p class="text-center py-3">Votre panier est vide</p>
+            </div>
+            <div class="cart-footer">
+                <div class="d-flex justify-content-between mb-2">
+                    <span>Total:</span>
+                    <span id="cart-total">€0.00</span>
+                </div>
+                <button class="btn btn-sm btn-success w-100">Commander</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JS personnalisé -->
+    <script src="js/script.js"></script>
+</body>
+</html>
